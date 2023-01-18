@@ -1,0 +1,27 @@
+--Create a grocery store database.
+
+CREATE TABLE store (id INTEGER, item TEXT, price INTEGER);
+INSERT INTO store VALUES
+(1, 'Flash drive', 3),
+(2, 'Keyboard', 80),
+(3, 'Mouse', 60),
+(4, 'Headset', 120),
+(5, 'NVIDIA GEFORCE 3080TI', 1800),
+(6, 'Memory', 45),
+(7, 'ASUS ROG STRIX X570 WIFI', 160),
+(8, 'PowerSpec Computer', 2000),
+(9, 'Payday', 2),
+(10, 'Ender 3 3d Printer', 200),
+(11, 'External HDD 2TB', 175),
+(12, 'The Last of US', 70),
+(13, 'Blue Yeti Microphone', 120),
+(14, 'El Gato', 60),
+(15, 'Printer', 80);
+
+
+--Display the database ordered by price.
+SELECT * FROM store 
+ORDER BY price;
+
+--How much would it be to buy everything in the store?
+SELECT SUM(price) FROM store;
